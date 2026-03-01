@@ -2,7 +2,8 @@ const obj={}
 console.log(obj)
 
 
-const objsym=Symbol()
+
+const objsym=Symbol("key1")
 
 const obj1={
     first_name:"shiva",
@@ -22,3 +23,18 @@ console.log(typeof obj1.age)
 console.log(obj1[objsym]) //CORRECT WAY TO ACCESS A SYMBOL
 console.log(typeof objsym)
   
+console.log(obj1)
+obj1.age=34
+console.log(obj1)
+// Object.freeze(obj1) //freeze the object so nothing gonna change later after freeze
+obj1.age=22
+console.log(obj1) 
+
+
+
+// this keyword using to print name
+obj1.greeting=function(){
+     console.log(`hey there ${this.first_name} welcome`)
+}
+
+obj1.greeting()
