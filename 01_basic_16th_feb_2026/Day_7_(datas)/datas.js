@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+let dates=new Date()
+console.log(dates)
+=======
 let dates=new Date()
 console.log(dates)
 // console.log(dates.toString())
@@ -21,3 +25,4 @@ console.log(dates.getMonth()+1) // to get precise bcz of indexing start with 0
 
 
 console.log(`year is ${dates.getFullYear()} `  ) //with dynamic 
+>>>>>>> 0deba50c74e07aef07f73b877e594e0151c6f5e7
