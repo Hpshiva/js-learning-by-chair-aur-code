@@ -1,7 +1,7 @@
-function my_name(name){               // function ke defination are parameters
+function my_name(name="default_name"){               // function ke defination are parameters
     console.log(`${name} is my name`) //backtick
 }
-my_name("lorem40")                    //function ko call are arguments
+my_name()                    //function ko call are arguments
 
 
 
