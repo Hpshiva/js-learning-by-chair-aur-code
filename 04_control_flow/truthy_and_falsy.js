@@ -26,4 +26,9 @@ if(userEmail.length===0){
 // with object
 if(Object.keys(userEmail).length===0){      // Object.keys will give an ARRAY
     console.log("object is empty")
+} 
+
+// for number also true
+if(userEmail){
+    console.log("working")
 }

@@ -13,8 +13,8 @@
 - [x] Day 2 – Data Types
 - [x] Day 3 – Type Conversion
 - [x] Day 4 – Memory (Stack vs Heap)
-- [ ] Day 5 – Operators (== vs ===)
-- [ ] Day 6 – Conditionals (if / switch)
+- [x] Day 5 – Operators (== vs ===)
+- [x] Day 6 – Conditionals (if / switch)
 - [ ] Day 7 – Loops (for, while)
 
 ---
