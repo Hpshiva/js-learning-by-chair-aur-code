@@ -22,3 +22,4 @@ function iffe(){
 ((name)=>{
     console.log("iffe with arrow function" , `${name}`)
 })("shiva");
+ 
