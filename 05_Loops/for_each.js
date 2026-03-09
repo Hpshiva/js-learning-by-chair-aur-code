@@ -39,6 +39,9 @@ const obj = [
 ]
 
 
-obj.forEach((obj)=>{
+obj.forEach((obj )=>{
 console.log(obj)
 })
+
+
+// forEach kuch bhi return nhi kr ta h 
