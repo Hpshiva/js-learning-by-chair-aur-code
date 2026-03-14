@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <ul class="language">
+      <li>JavaScript</li>
+    </ul>
+
+    <script>
+      function addElm(item) {
+        const addelement = document.createElement("li");
+        // addelement.innerText = `${item}`;
+        addelement.appendChild(document.createTextNode(`${item}`));
+        // addelement.style.padding = "1rem";
+        document.querySelector(".language").appendChild(addelement);
+      }
+      addElm("Js by chai aur code");
+      addElm("Typescript");
+      addElm("GoLang");
+
+      //  EDITING
+      const secondVal = document.querySelector(".language:nth-child(3)");
+      const newSecondLi=document.createElement('li')
+      newSecondLi.textContent = "python";
+      
+    </script>
+  </body>
+</html>
