@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+        function addingElement(item) {
+           for (let i = 0; i < item; i++) {
+
+
+             //to create element 
+            const div = document.createElement('div')
+
+            //display what inside but it will not dislay anything bcz not appended to the html
+            console.log(div)
+
+            //added class to div
+            div.className = "main"
+
+            //added id to div
+            div.id = Math.round(Math.random() * 10 + 1)
+
+            // added attributes
+            div.setAttribute("key", "values")
+
+            //added styling to div 
+            div.style.padding = "2rem"
+            div.style.marginBottom="1rem"
+            div.style.backgroundColor = "crimson"
+
+            // div.innerText="shiva or code"
+            const addText = document.createTextNode("chai or code")     //adding data to it
+            div.appendChild(addText)
+
+            // finally appending to html
+            document.body.appendChild(div)
+
+
+            
+           }
+        }
+        addingElement(2)
+    </script>
+</body>
+
+</html>
