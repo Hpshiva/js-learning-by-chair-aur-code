@@ -16,7 +16,12 @@
         DOM learning
     </h1>
 
-
+<ul> 
+    <li class="list-item">1</li>
+    <li class="list-item">2</li>
+    <li class="list-item">3</li>
+    <li class="list-item">4</li>
+</ul> 
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis id iusto velit! Cumque unde voluptatem illo, molestiae dolore corrupti praesentium ullam corporis. Perferendis aspernatur tenetur illo ducimus, dicta ipsam tempora adipisci, nulla reprehenderit natus maiores fugiat molestiae fuga ea incidunt veritatis officiis unde error accusamus aut explicabo excepturi. Esse, voluptates.</p>
 </body>
 </html>
@@ -24,3 +29,28 @@
 
 <!-- document.getElementById('hero-section-brand-heading').innerHTML="<h1> change to shiva hub </h1>"
 "<h1> change to shiva hub </h1>"  -->
+
+
+<!-- document.getElementsByClassName('list-item')
+HTMLCollection { 0: li.list-item, 1: li.list-item, 2: li.list-item, 3: li.list-item, length: 4 }
+
+
+
+
+const temp_classs=document.getElementsByClassName('list-item')
+
+temp_classs
+HTMLCollection { 0: li.list-item, 1: li.list-item, 2: li.list-item, 3: li.list-item, length: 4 }        // this is not node list so no foreach first we need to create to ARRAY
+
+
+newtemp=Array.from(temp_classs)
+Array(4) [ li.list-item, li.list-item, li.list-item, li.list-item ]
+
+newtemp[2]
+<li class="list-item">
+
+newtemp[2].style.color="cyan"
+"cyan"
+newtemp.forEach((item)=>item.style.fontSize="3rem")
+
+newtemp.forEach((item)=>item.style.fontColor="pink")  -->
