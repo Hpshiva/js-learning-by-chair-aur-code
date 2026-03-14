@@ -25,9 +25,12 @@
 
       //  EDITING
       const secondVal = document.querySelector(".language:nth-child(3)");
-      const newSecondLi=document.createElement('li')
+      const newSecondLi = document.createElement("li");
       newSecondLi.textContent = "python";
-      
+
+      // REMOVE
+      const removeElem = document.querySelector("li:last-child");
+      removeElem.remove();
     </script>
   </body>
 </html>
