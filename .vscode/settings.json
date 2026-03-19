@@ -1,6 +1,12 @@
 {
-  "liveServer.settings.port": 5501,
+  "liveServer.settings.port": 5502,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "editor.formatOnPaste": true
+  "editor.formatOnPaste": true,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  }
 }
