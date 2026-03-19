@@ -36,12 +36,12 @@
             // e.target.parentNode.remove()    // it will move parentNode and <li>
 
 
-                
-            // only removing IMG from ul > li > img         // bcz before on click to li whole ul getting deleting
-            // if (e.target.tagName === 'IMG') {
-            //     e.target.parentNode.remove()
 
-            // }
+            // only removing IMG from ul > li > img         // bcz before on click to li whole ul getting deleting
+            if (e.target.tagName === 'IMG') {
+                e.target.parentNode.remove()
+
+            }
 
         })
         document.getElementById('festival').addEventListener('click', function (e) {
