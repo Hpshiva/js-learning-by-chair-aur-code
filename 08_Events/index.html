@@ -32,11 +32,16 @@
         document.getElementById('images').addEventListener('click', function (e) {
             console.log("clicked id=images")
 
-            // only removing IMG from ul > li > img         // bcz before on click to li whole ul getting deleting
-            if (e.target.tagName === 'IMG') {
-                e.target.parentNode.remove()
+            // e.target.remove()       // it will select only img and remove it but <li> will be there as empty
+            // e.target.parentNode.remove()    // it will move parentNode and <li>
 
-            }
+
+                
+            // only removing IMG from ul > li > img         // bcz before on click to li whole ul getting deleting
+            // if (e.target.tagName === 'IMG') {
+            //     e.target.parentNode.remove()
+
+            // }
 
         })
         document.getElementById('festival').addEventListener('click', function (e) {
