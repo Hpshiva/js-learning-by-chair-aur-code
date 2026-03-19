@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Background color change</h1>
+
+    <button class="start">Start</button>
+    <button class="stop">Stop</button>
+
+
+
+    <script>
+
+        const ChangeColor = function () {
+            const hex = "0123456789ABCDEF"
+            let color = "#"
+
+            for (let i = 0; i < 6; i++) {
+                color = color + hex[Math.floor(Math.random() * 16)]
+
+            }
+            console.log(color)
+            return color
+        }
+        let setinterval
+        document.querySelector('.start').addEventListener('click', function () {
+            setinterval = setInterval(function () {
+                document.querySelector('body').style.backgroundColor = ChangeColor()
+            }, 100)
+            document.querySelector('.start').disabled = true
+            document.querySelector('.stop').disabled = false
+
+        })
+
+
+
+        document.querySelector('.stop').addEventListener('click', function () {
+            clearInterval(setinterval)
+            setinterval = null
+            document.querySelector('.stop').disabled = true
+            document.querySelector('.start').disabled = false
+        })
+    </script>
+</body>
+
+</html>

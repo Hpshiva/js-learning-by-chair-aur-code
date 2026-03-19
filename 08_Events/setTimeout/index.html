@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: rgb(122, 122, 122); color:white">
+    <h2>Async</h2>
+
+    <button>click to start</button>
+    <button class="stop">click to Stop</button>
+    <script>
+        const h2 = document.querySelector('h2')
+
+        const start = document.querySelector("button")
+        start.addEventListener('click', function () {
+            // multiple times
+            setInterval(function () {
+                console.log("Inside setInterval after 2 seconds")
+            }, 2000)
+
+
+
+            // // only once
+            // setTimeout(function () {
+            //     console.log("Inside setTimeout after 3 seconds")
+            //     h2.innerHTML = "Best Way to Learn Async"
+            // }, 3000)
+
+
+        })
+
+
+        const callMe = setTimeout(function () {
+            console.log("Inside setTimeout after 3 seconds")
+            h2.innerHTML = "Best Way to Learn Async"
+        }, 3000)
+
+
+        document.querySelector('.stop').addEventListener('click', function () {
+            //to clear the Timeout
+            clearTimeout(callMe)
+            console.log("Stoped")
+
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: rgb(122, 122, 122); color:white">
+    <h1>setInterval</h1>
+
+    <button class="start">Start</button>
+    <button class="stop">Stop</button>
+
+
+
+    <script>
+        const callme = function () {
+            console.log("setinterval started after 2 seconds")
+        }
+
+        let stop
+
+        document.querySelector('.start').addEventListener('click', function () {
+            console.log("Button get Clicked")
+  
+            stop = setInterval(callme, 2000)
+
+        })
+
+
+        document.querySelector('.stop').addEventListener('click', function () {
+            console.log("Its Stoped now")
+            clearInterval(stop)
+
+        })
+    </script>
+
+</body>
+
+</html>
