@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #858585;
+        }
+
+        img {
+            width: 250px;
+            height: 150px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <ul id="images">
+        <li><img src="https://images.pexels.com/photos/36205791/pexels-photo-36205791.jpeg" alt="" id="tree"></li>
+        <li><img src="https://images.pexels.com/photos/6667281/pexels-photo-6667281.jpeg" alt="" id="temple"></li>
+        <li><img src="https://images.pexels.com/photos/36633707/pexels-photo-36633707.jpeg" alt="" id="festival"></li>
+        <li><img src="https://images.pexels.com/photos/6073482/pexels-photo-6073482.jpeg" alt="" id="beach"></li>
+        <li><img src="https://images.pexels.com/photos/6114223/pexels-photo-6114223.jpeg" alt="" id="ocean"></li>
+        <li><a href="https://www.google.com/" target="_blank" id="google">google</a></li>
+    </ul>
+
+    <script>
+        document.getElementById('images').addEventListener('click', function (e) {
+            console.log("clicked id=images")
+
+            // only removing IMG from ul > li > img         // bcz before on click to li whole ul getting deleting
+            if (e.target.tagName === 'IMG') {
+                e.target.parentNode.remove()
+
+            }
+
+        })
+        document.getElementById('festival').addEventListener('click', function (e) {
+            console.log("clicked id=festival")
+            e.stopPropagation()
+        })
+
+        document.getElementById('google').addEventListener('click', function (e) {
+            e.preventDefault()
+            e.stopPropagation()
+            console.log("google clicked")
+        })
+    </script>
+</body>
+
+</html>
