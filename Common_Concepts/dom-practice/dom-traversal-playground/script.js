@@ -9,6 +9,7 @@ const childs = document.querySelectorAll('.child')
 for (let elem of childs) {
     elem.addEventListener('click', () => {
         //elem.closest(".grandparent").style.backgroundColor = "pink"
+
     })
 }
 //  .parentElement = goes to parent of the element
@@ -20,6 +21,7 @@ for (let elem of childs) {
 // regardless of what that element actually is.
 
 
+
 // let traverse to childrens
 parent.addEventListener('click', () => {
 
@@ -28,9 +30,18 @@ parent.addEventListener('click', () => {
 
     // parent's last child Element 
     parent.lastElementChild.style.backgroundColor = "green"
-    // for (let elem of parent.children) {
 
-    //     elem.style.backgroundColor = "crimson"
-    //     console.log(elem)
-    // }
+    //  all Childrens
+    for (let elem of parent.children) {
+        // elem.style.backgroundColor = "crimson"
+        // console.log(elem)
+    }
+
+    //   next element Sibling
+    let current = parent.firstElementChild
+    current.nextElementSibling.style.backgroundColor = "orange"
+
+    //  previous Element Sibling
+    let previous = parent.lastElementChild
+    previous.previousElementSibling.style.backgroundColor = 'cyan'
 })
