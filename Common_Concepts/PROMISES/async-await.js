@@ -67,12 +67,18 @@ function getComment() {
     })
 }
 
-document.querySelector('#btn').addEventListener('click', () => {
-    login()
-        .then(getProfile)
-        .then(getPost)
-        .then(getComment)
-        .then(() => console.log("All done"))
-        .catch((error) => heading.textContent = error)
 
+// all above are same functions, just need to change here 
+// add click Event 
+document.querySelector('#btn').addEventListener('click', async () => {
+    try {
+        await login()
+        await getProfile()
+        await getPost()
+        await getComment()
+
+        console.log("All done")
+    } catch (error) {
+        heading.textContent = error
+    }
 })
