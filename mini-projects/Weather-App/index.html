@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body class="p-[5rem] flex flex-col items-center gap-4">
+
+    <div class="backdrop-blur-xl bg-white/10 rounded-3xl p-8 border border-white/20">
+
+        <h1 class="text-4xl font-bold">PROJECT 3 — Weather App
+        </h1>
+        <div class="flex items-center justify-center mt-12">
+            <div class="flex items-center gap-3 w-full max-w-2xl p-3 rounded-3xl
+            bg-white/10 backdrop-blur-xl border border-white/20
+            shadow-[0_8px_32px_rgba(0,0,0,0.15)]">
+                <input id="searchBar" type="text" placeholder="Search city..." class="flex-1 bg-transparent px-4 py-3 text-lg text-black
+                placeholder:text-black/50 outline-none" />
+
+                <button id="btn" class="px-6 py-3 rounded-2xl font-semibold text-white
+                bg-gradient-to-r from-blue-500 to-cyan-500
+                hover:from-blue-600 hover:to-cyan-600
+                active:scale-95
+                transition-all duration-300
+                shadow-lg shadow-blue-500/30">
+                    Search
+                </button>
+            </div>
+        </div>
+
+
+        <div class="mt-5">
+
+            <div
+                class="flex gap-3 w-[450px] px-5 py-3 text-lg  rounded-xl shadow-sm outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+                <label for="name">Place :- </label>
+                <p id="place"></p>
+            </div>
+            <div
+                class="flex gap-3 w-[450px] px-5 py-3 text-lg  rounded-xl shadow-sm outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+                <label for="name">Temperature :- </label>
+                <p id="temp"></p>
+            </div>
+            <div
+                class="flex gap-3 w-[450px] px-5 py-3 text-lg  rounded-xl shadow-sm outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+                <label for="name">Humidity :- </label>
+                <p id="humidity"></p>
+            </div>
+            <div
+                class="flex gap-3 w-[450px] px-5 py-3 text-lg  rounded-xl shadow-sm outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+                <label for="name">Condition :- </label>
+                <p id="condition"></p>
+            </div>
+            <div
+                class="flex gap-3 w-[450px] px-5 py-3 text-lg  rounded-xl shadow-sm outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition">
+                <label for="name">Wind :- </label>
+                <p id="wind"></p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
