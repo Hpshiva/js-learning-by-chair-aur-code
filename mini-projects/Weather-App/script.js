@@ -4,9 +4,12 @@ const button = document.querySelector('#btn')
 
 button.addEventListener('click', async () => {
     try {
-        const res = await fetch(`https://api.weatherapi.com/v1/current.json?key=471efde44dfd490cbe895600260406&q=${input.value}`)
+        const res = await fetch(`https://api.weatherapi.com/v1/current.json?key=471efde44dfd490cbe895600260406&q=${input.value.trim()}`)
         const data = await res.json()
-        console.log(data.location.name)
+
+        if (data.error) {
+            button.textContent = "User Not Found"
+        }
 
         if (!res.ok) return
 
