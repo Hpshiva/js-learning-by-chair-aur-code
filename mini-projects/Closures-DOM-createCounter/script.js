@@ -4,32 +4,32 @@ function createCounter() {
     let counter = 0
 
     function incre() {
-        document.querySelector("#incre").addEventListener('click', () => {
-
-            return show.textContent = counter++
-        })
+        return ++counter
     }
     function decre() {
-        document.querySelector("#decre").addEventListener('click', () => {
-            return show.textContent = counter--
-        })
+        if (counter <= 0) return counter = 0
+        else return --counter
     }
     function reset() {
-        document.querySelector("#reset").addEventListener('click', () => {
-            counter = 0
-            return show.textContent = counter
-        })
-    }
-    function getShow() {
-        return show.textContent = counter
+        return counter = 0
+
     }
 
+
     return {
-        incre, decre, reset, getShow
+        incre, decre, reset
     }
 }
 const res = createCounter()
-res.incre()
-res.getShow()
-res.decre()
-res.reset()
+
+document.querySelector("#incre").addEventListener('click', () => {
+    show.textContent = res.incre()
+})
+
+document.querySelector("#decre").addEventListener('click', () => {
+    show.textContent = res.decre()
+})
+
+document.querySelector("#reset").addEventListener('click', () => {
+    show.textContent = res.reset()
+})
