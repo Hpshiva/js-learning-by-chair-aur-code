@@ -256,3 +256,23 @@ citys.forEach(item => {
     }
 })
 console.log("16.", citySort)
+
+
+
+
+//  17.Group By Property (Intermediate)
+const products = [
+    { name: "Laptop", category: "Electronics" },
+    { name: "Mouse", category: "Electronics" },
+    { name: "Shirt", category: "Clothing" },
+    { name: "Jeans", category: "Clothing" }
+]
+const resultArr = {}
+products.forEach(item => {
+    if (!resultArr[item.category]) {
+        resultArr[item.category] = 0
+        resultArr[item.category]++
+    }
+    else resultArr[item.category]++
+})
+console.log("17.", resultArr)
